@@ -49,7 +49,8 @@ Anubi, Olugbenga Moses, and Charalambos Konstantinou. "Enhanced resilient state 
 Yu Zheng, et al. "Attack-Resilient Weighted L1 Observer with Prior Pruning". 2021 American Control Conference. (can be found in papers folder)
 
 ### Comparison result (estimation errors)
-"/result/estimation_error.JPG": Estimation error
+![estimation_error](https://user-images.githubusercontent.com/36635562/109057815-39254e80-76b0-11eb-964d-edce72b865de.png) Estimation error
+
 
 ## Planned testing observers
 
