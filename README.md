@@ -4,7 +4,7 @@ Good Resilient Observes in literature and my resilent observers will be tested h
 
 
  >The motivation to make this simulation be open-source is: **The environment is too isolated in control community**. 
- You usually find a good paper, then I need to take too much time to implement it, it is still okay if the author know how to write a clear paper. But, usually, most of people don't know. We should borrow the idea from AI community, **share** is the most important motivation for progress. 
+ You usually find a good paper, then you need to take too much time to implement it, it is still okay if the author knows how to write a clear paper. But, usually, most of people don't know. We should borrow the idea from AI community, **share** is the most important motivation for progress. 
  If you agree with me, if you benefits from my sharing stuff, please join me, push this world.
 
  
