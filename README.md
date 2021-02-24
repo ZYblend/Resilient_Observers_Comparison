@@ -20,7 +20,7 @@ Unfortunately, it is being under review. It will be attached accepted.
 You can also cite an introduction version of it (accepted):
 '''
 @inproceedings{zheng2021Resilient,
-  title={Attack-Resilient Weighted $\ell_1$ Observer with Prior Pruning},
+  title={Attack-Resilient Weighted L1 Observer with Prior Pruning},
   author={Zheng, Yu and Anubi, Olugbenga Moses},
   booktitle={2021 American control conference},
   pages={},
@@ -46,10 +46,10 @@ Anubi, Olugbenga Moses, et al. "Multi-Model Resilient Observer under False Data 
 Anubi, Olugbenga Moses, and Charalambos Konstantinou. "Enhanced resilient state estimation using data-driven auxiliary models." IEEE Transactions on Industrial Informatics 16.1 (2019): 639-647.
 
 ### 4. Resilient Pruning Observer
-Yu Zheng, et al. "Attack-Resilient Weighted $\ell_1$ Observer with Prior Pruning". 2021 American Control Conference. (can be found in papers folder)
+Yu Zheng, et al. "Attack-Resilient Weighted L1 Observer with Prior Pruning". 2021 American Control Conference. (can be found in papers folder)
 
 ### Comparison result (estimation errors)
-
+"/result/estimation_error.JPG": Estimation error
 
 ## Planned testing observers
 
