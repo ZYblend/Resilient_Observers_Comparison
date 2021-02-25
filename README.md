@@ -23,7 +23,7 @@ If you use the codes, please cite
 }
 ```
 
-Unfortunately, it is being under review. It will be attached accepted.
+Unfortunately, we are makeing last-round of polishing. We will send it out soon and it will be attached once accepted.
 
 You can also cite an introduction version of it (accepted):
 ```
