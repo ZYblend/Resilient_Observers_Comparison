@@ -42,8 +42,8 @@ Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
 
 ## Tested observers
 
-### 1. Robust Local estiamtor + Global fusion
-Nakahira, Yorie, and Yilin Mo. "Attack-Resilient H_2, H_\infty, and L1 State Estimator." IEEE Transactions on Automatic Control 63.12 (2018): 4353-4360.
+### 1. L1 decoder
+Fawzi, Hamza, Paulo Tabuada, and Suhas Diggavi. "Secure estimation and control for cyber-physical systems under adversarial attacks." IEEE Transactions on Automatic control 59.6 (2014): 1454-1467.
 
 ### 2. Switched/event triggered Luengbuger observer
 Lu, An-Yang, and Guang-Hong Yang. "Secure state estimation for cyber-physical systems under sparse sensor attacks via a switched Luenberger observer." Information sciences 417 (2017): 454-464. <br>
@@ -57,13 +57,16 @@ Anubi, Olugbenga Moses, and Charalambos Konstantinou. "Enhanced resilient state 
 Yu Zheng, et al. "Attack-Resilient Weighted L1 Observer with Prior Pruning". 2021 American Control Conference. (can be found in papers folder)
 
 ### Comparison result (estimation errors)
-![estimation_error](https://user-images.githubusercontent.com/36635562/109057815-39254e80-76b0-11eb-964d-edce72b865de.png) Estimation error
+![estimation_error](https://user-images.githubusercontent.com/36635562/109057815-39254e80-76b0-11eb-964d-edce72b865de.png) Estimation error (LO: luenburger observer, UL1O: unconstrained L1 decoder, MMO: multi-models observer, ETLO: event triggered Luengbuger observer, RPO: Resilient Pruning Observer)
 
 
 ## Planned testing observers
 
-### 5. Gramian-based estimator
+### 5. Robust Local estiamtor + Global fusion
+Nakahira, Yorie, and Yilin Mo. "Attack-Resilient H_2, H_\infty, and L1 State Estimator." IEEE Transactions on Automatic Control 63.12 (2018): 4353-4360.
+
+### 6. Gramian-based estimator
 Chong, Michelle S., Masashi Wakaiki, and Joao P. Hespanha. "Observability of linear systems under adversarial attacks." 2015 American Control Conference (ACC). IEEE, 2015.
 
-### 6. SMT-based observer 
+### 7. SMT-based observer 
 Shoukry, Yasser, et al. "Secure state estimation for cyber-physical systems under sensor attacks: A satisfiability modulo theory approach." IEEE Transactions on Automatic Control 62.10 (2017): 4917-4932.
