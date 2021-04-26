@@ -80,5 +80,5 @@ The updated comparison result:
 ![application_example_result](https://user-images.githubusercontent.com/36635562/116096724-848bb700-a677-11eb-9bf8-2c4711542b0e.png)
 
 The performance of designed FDIA:
-
+![BDD](https://user-images.githubusercontent.com/36635562/116096879-a4bb7600-a677-11eb-94f4-6d70d3885bf3.png)
 
