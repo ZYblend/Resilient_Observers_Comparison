@@ -1,4 +1,4 @@
-function q_eta_hat = pruning_algorithm(q,Tr)
+function q_eta_hat = pruning_algorithm(q,P)
 % function q_eta_hat = pruning_algorithm(I_attack)
 % Description:
 %              This function is to implement pruning algorithm based on
@@ -16,15 +16,16 @@ function q_eta_hat = pruning_algorithm(q,Tr)
 % @Written by Yu Zheng, Tallahassee, Florida, Aug. 2020
 
 N = length(q);
-%% estimated support (oracle)
-    P = zeros(N,1);
-    while sum(P>0.5) == 0
-        u = rand(N,1);
-        P = (0.5/(1-Tr)*u).*double(u<(1-Tr)) + (0.5 + (0.5/Tr)*(u-1+Tr)).*double(u>=(1-Tr));% ROC
-    end
- 
-    epsilon = double(P>0.5);                         % agreement 
-    q_hat = (q - (1-epsilon))./(2*epsilon-1);        % estimate support indics
+q_hat = q;
+% %% estimated support (oracle)
+%     P = zeros(N,1);
+%     while sum(P>0.5) == 0
+%         u = rand(N,1);
+%         P = (0.5/(1-Tr)*u).*double(u<(1-Tr)) + (0.5 + (0.5/Tr)*(u-1+Tr)).*double(u>=(1-Tr));% ROC
+%     end
+%  
+%     epsilon = double(P>0.5);                         % agreement 
+%     q_hat = (q - (1-epsilon))./(2*epsilon-1);        % estimate support indics
     
 %% obtain trust number
 % L_eta: the smallest number of success estimates in oracle with
