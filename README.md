@@ -75,3 +75,10 @@ Shoukry, Yasser, et al. "Secure state estimation for cyber-physical systems unde
 add real ML localization algorithm, below is the precision of the generated support prior
 
 ![Prior_precision](https://user-images.githubusercontent.com/36635562/116096584-6aea6f80-a677-11eb-9a5b-8c29c95f26ca.png)
+
+The updated comparison result:
+![application_example_result](https://user-images.githubusercontent.com/36635562/116096724-848bb700-a677-11eb-9bf8-2c4711542b0e.png)
+
+The performance of designed FDIA:
+
+
