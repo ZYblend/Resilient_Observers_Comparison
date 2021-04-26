@@ -12,16 +12,23 @@ error_L1O  = out.logsout.getElement('error_L1O').Values.Data; % error of L1 obse
 error_ELO = out.logsout.getElement('error_ELO').Values.Data; % error of event-triggered luenburger
 error_MMO = out.logsout.getElement('error_MMO').Values.Data; % error of multi-model observer
 error_WL1P = out.logsout.getElement('error_WL1P').Values.Data; % error of pruning observer
+% error_H2O = out.logsout.getElement('error_H2O').Values.Data; % error of robust H2 observer
 
 x_hat_LO  = out.logsout.getElement('x_hat_LO').Values.Data; % Observed states (Luenberger)
 x_hat_L1O = out.logsout.getElement('x_hat_L1O').Values.Data; % Observed states (Unconstrained l1)
 x_hat_MMO = out.logsout.getElement('x_hat_MMO').Values.Data; % Observed states (muti-model)
 x_hat_ELO = out.logsout.getElement('x_hat_ELO').Values.Data; % Observed states (event-triggered luenburger)
 x_hat_WL1P = out.logsout.getElement('x_hat_WL1P').Values.Data; % Observed states (pruning)
+% x_hat_H2O = out.logsout.getElement('x_hat_H2O').Values.Data; % Observed states (robust H2 observer)
+
 
 % FDIA performance
 aux_model_res  = out.logsout.getElement('y_obsv').Values.Data; % measured y for observer (y_obsv = y-D*u)
 BDD_res        = out.logsout.getElement('BDD_res').Values.Data; % Bad data residue
+
+% prior performance
+q = out.logsout.getElement('q').Values.Data;
+q_hat = out.logsout.getElement('q_hat').Values.Data;
 
 %% Ploting/Visualization/Metric tables
 % figure(1) % errors
@@ -78,10 +85,11 @@ FS = 15;   % font size
 
 % states estimation compare
 
-
+n_comp = 5;   % number of observes in comparison
+n_pres = 5;   % number of states presented
 figure (2)
-for iter=1:5
-    subplot(5,5,1+(iter-1)*5)
+for iter=1:n_pres
+    subplot(n_pres,n_comp,1+(iter-1)*n_comp)
     plot(time_vec,error_LO(:,iter),'k','LineWidth',LW)
     if(iter == 1)
         title('LO','Fontsize',FS)
@@ -89,47 +97,53 @@ for iter=1:5
     ylabel(['$$\delta_{' num2str(iter) '}-\hat{\delta_{' num2str(iter) '}}$$'],'FontWeight','bold','Fontsize',FS,'interpreter','latex')
     set(gca,'fontweight','bold','fontsize',12) 
     set(gca,'LineWidth',1)
+    axis([0 8 -50e-4 50e-4])
     
-    subplot(5,5,2+(iter-1)*5)
+    subplot(n_pres,n_comp,2+(iter-1)*n_comp)
     plot(time_vec,error_L1O(:,iter),'k','LineWidth',LW)
     if(iter == 1)
         title('UL1O','Fontsize',FS)
     end
     set(gca,'fontweight','bold','fontsize',12) 
     set(gca,'LineWidth',1)
+    axis([0 8 -50e-4 50e-4])
     
-    subplot(5,5,3+(iter-1)*5)
-    plot(time_vec,error_MMO(:,iter),'k','LineWidth',LW)
-    if(iter == 1)
-        title('MMO','Fontsize',FS)
-    end
-    set(gca,'fontweight','bold','fontsize',12) 
-    set(gca,'LineWidth',1)
-
-    subplot(5,5,4+(iter-1)*5)
+    subplot(n_pres,n_comp,3+(iter-1)*n_comp)
     plot(time_vec,error_ELO(:,iter),'k','LineWidth',LW)
     if(iter == 1)
         title('ETLO','Fontsize',FS)
     end
     set(gca,'fontweight','bold','fontsize',12) 
     set(gca,'LineWidth',1)
+    axis([0 8 -50e-4 50e-4])
     
-    subplot(5,5,5+(iter-1)*5)
+    subplot(n_pres,n_comp,4+(iter-1)*n_comp)
+    plot(time_vec,error_MMO(:,iter),'k','LineWidth',LW)
+    if(iter == 1)
+        title('MMO','Fontsize',FS)
+    end
+    set(gca,'fontweight','bold','fontsize',12) 
+    set(gca,'LineWidth',1)
+    axis([0 8 -50e-4 50e-4])
+
+    
+    subplot(n_pres,n_comp,5+(iter-1)*n_comp)
     plot(time_vec,error_WL1P(:,iter),'k','LineWidth',LW)
     if(iter == 1)
         title('RPO','Fontsize',FS)
     end
     set(gca,'fontweight','bold','fontsize',12) 
     set(gca,'LineWidth',1)
+    axis([0 8 -50e-4 50e-4])
     
 end
 
 
-% % BDD_res
-% figure(3)
-% plot(time_vec,BDD_res,'k','LineWidth',LW), hold on
-% plot(time_vec,BDD_thresh*ones(length(time_vec),1),'r--','LineWidth',2*LW)
-% ylabel('Bad Data Detection Residual','FontWeight','bold')
+% BDD_res
+figure(3)
+plot(time_vec,BDD_res,'k','LineWidth',LW), hold on
+plot(time_vec,BDD_thresh*ones(length(time_vec),1),'r--','LineWidth',2*LW)
+ylabel('Bad Data Detection Residual','FontWeight','bold')
 
 % error metric table (for rotor angle)
 n_delta = size(x,2)/2;  % number of generator angles
@@ -143,3 +157,31 @@ metric_rms = @(x,dim) sqrt(sum(x.^2,dim)/size(x,dim));
 metric_max = @(x,dim) max(abs(x),[],dim);
 error_table = [metric_rms(error_LO_delta,2) metric_rms(error_L1O_delta,2) metric_rms(error_ELO_delta,2) metric_rms(error_MMO_delta,2) metric_rms(error_WL1P_delta,2) ...
                metric_max(error_LO_delta,2) metric_max(error_L1O_delta,2) metric_max(error_ELO_delta,2) metric_max(error_MMO_delta,2) metric_max(error_WL1P_delta,2)];
+
+           
+ %% prior evaluation
+tot = size(time_vec,1);
+PPV = zeros(tot,1);
+for j = 1:tot
+    safe_hat = find(q_hat(j,:));
+    safe = find(q(j,:));
+    TP = numel(intersect(safe_hat, safe));
+    
+    risk = find(~q(j,:));
+    FP = numel(intersect(safe_hat, risk));
+    
+    PPV(j) = TP/(TP+FP);
+end
+
+% plot
+figure(4)
+plot(time_vec,PPV,'k','LineWidth',LW)
+ylabel('PPV','FontWeight','bold','Fontsize',FS)
+xlabel('time','FontWeight','bold','Fontsize',FS)
+title('Precision of prior','Fontsize',FS)
+set(gca,'fontweight','bold','fontsize',FS) 
+set(gca,'LineWidth',1)
+
+    
+ 
+ 

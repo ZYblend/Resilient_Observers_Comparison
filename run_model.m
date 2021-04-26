@@ -150,6 +150,7 @@ tau     = 0.1;              % auxiliary model (1-reliability level)
 U0      = zeros(m,T);
 Y0      = zeros(m,T);
 q0      = ones(m,T);   % q=1 means safe
+p0      = zeros(m,T);
 
 [PhiT,HT,Theta_T,G_T,r_tau] = opti_params(A_bar_d,B_bar_d,C_obsv_d,T,tau);
 
@@ -191,6 +192,9 @@ n_stds = 3;  % number of standard deviations to locate auxiliary mean
 % Initial Sigmas
 sigma_inv_k = 1e4*(3 + 2*rand(m,1)); % surrogate inverse covariance values. Assume diagonal covariance matrix.
 Sigma_inv_k = diag(sigma_inv_k);
+
+sigma = (1e-3)*(1 + 2*rand(m,1));
+Sigma = diag(sigma);
 
 U_y_1 = 0;
 
