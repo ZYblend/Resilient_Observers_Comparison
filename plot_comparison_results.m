@@ -176,10 +176,10 @@ end
 % plot
 figure(4)
 plot(time_vec,PPV,'k','LineWidth',LW)
-ylabel('PPV','FontWeight','bold','Fontsize',FS)
-xlabel('time','FontWeight','bold','Fontsize',FS)
-title('Precision of prior','Fontsize',FS)
-set(gca,'fontweight','bold','fontsize',FS) 
+ylabel('PPV','FontWeight','bold','Fontsize',12)
+xlabel('time','FontWeight','bold','Fontsize',12)
+% title('Precision of prior','Fontsize',FS)
+set(gca,'fontweight','bold','fontsize',12) 
 set(gca,'LineWidth',1)
 
     

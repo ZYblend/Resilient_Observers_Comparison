@@ -147,19 +147,19 @@ T_final        = N_samples*T_sample;  % Total time for simulation
 tau     = 0.1;              % auxiliary model (1-reliability level)
 
 % tapped delay
-U0      = zeros(m,T);
+U0      = zeros(l,T);
 Y0      = zeros(m,T);
 q0      = ones(m,T);   % q=1 means safe
 p0      = zeros(m,T);
 
-[PhiT,HT,Theta_T,G_T,r_tau] = opti_params(A_bar_d,B_bar_d,C_obsv_d,T,tau);
+[PhiT,HT,Theta_T,G_T,r_tau] = opti_params(A_bar_d,B_bar_d,C_obsv_d,T,tau); 
 
 % solver initial condition
 z_0         = zeros(n+m*T,1);
 
 %% Attack Parameters
 T_start_attack = .2*T_final;  % Time to begin attack. Neede to sshow system responses with/without attacks in the same simulation
-n_attack =  round(0.6*n_meas);
+n_attack =  round(0.1*n_meas);
 % max_attack = 100; % maximum allowable attack per channel
 
 %% Bad Data Detection
