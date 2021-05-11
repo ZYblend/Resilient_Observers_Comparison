@@ -1,7 +1,6 @@
 # Resilient_Observers_Comparison
 
 Good Resilient Observes in literature and my resilent observers will be tested here.
-<<<<<<< HEAD
 
 
  >The motivation to make this simulation be open-source is: **The environment is too isolated in control community**. 
@@ -40,48 +39,6 @@ You can also cite an introduction version of it (accepted):
 
 Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
 
-
-=======
-
-
- >The motivation to make this simulation be open-source is: **The environment is too isolated in control community**. 
- You usually find a good paper, then you need to take too much time to implement it, it is still okay if the author knows how to write a clear paper. But, usually, most of people don't know. We should borrow the idea from AI community, **"share"** is the most important motivation for progress. 
- If you agree with me, if you benefit from my sharing stuff, please join me, push our community.
-
- 
-
-
-If you use the codes, please cite
-
-```
-@inproceedings{zheng2021Resilient,
-  title={Resilient Observer Design Using Pruned Support Prior},
-  author={Zheng, Yu and Anubi, Olugbenga Moses},
-  booktitle={},
-  pages={},
-  year={2021},
-  organization={}
-}
-```
-
-Unfortunately, we are makeing last-round of polishing. We will send it out soon and it will be attached once accepted.
-
-You can also cite an introduction version of it (accepted):
-```
-@inproceedings{zheng2021Resilient,
-  title={Attack-Resilient Weighted L1 Observer with Prior Pruning},
-  author={Zheng, Yu and Anubi, Olugbenga Moses},
-  booktitle={2021 American control conference},
-  pages={},
-  year={2021},
-  organization={IEEE}
-}
-```
-
-Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
-
-
->>>>>>> 05dbd87cf4d14683a0e87e3485b32d72d5a9b86c
 ## Tested observers
 
 ### 1. L1 decoder
