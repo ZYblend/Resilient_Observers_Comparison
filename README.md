@@ -1,6 +1,7 @@
 # Resilient_Observers_Comparison
 
 Good Resilient Observes in literature and my resilent observers will be tested here.
+<<<<<<< HEAD
 
 
  >The motivation to make this simulation be open-source is: **The environment is too isolated in control community**. 
@@ -40,6 +41,47 @@ You can also cite an introduction version of it (accepted):
 Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
 
 
+=======
+
+
+ >The motivation to make this simulation be open-source is: **The environment is too isolated in control community**. 
+ You usually find a good paper, then you need to take too much time to implement it, it is still okay if the author knows how to write a clear paper. But, usually, most of people don't know. We should borrow the idea from AI community, **"share"** is the most important motivation for progress. 
+ If you agree with me, if you benefit from my sharing stuff, please join me, push our community.
+
+ 
+
+
+If you use the codes, please cite
+
+```
+@inproceedings{zheng2021Resilient,
+  title={Resilient Observer Design Using Pruned Support Prior},
+  author={Zheng, Yu and Anubi, Olugbenga Moses},
+  booktitle={},
+  pages={},
+  year={2021},
+  organization={}
+}
+```
+
+Unfortunately, we are makeing last-round of polishing. We will send it out soon and it will be attached once accepted.
+
+You can also cite an introduction version of it (accepted):
+```
+@inproceedings{zheng2021Resilient,
+  title={Attack-Resilient Weighted L1 Observer with Prior Pruning},
+  author={Zheng, Yu and Anubi, Olugbenga Moses},
+  booktitle={2021 American control conference},
+  pages={},
+  year={2021},
+  organization={IEEE}
+}
+```
+
+Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
+
+
+>>>>>>> 05dbd87cf4d14683a0e87e3485b32d72d5a9b86c
 ## Tested observers
 
 ### 1. L1 decoder
@@ -70,3 +112,15 @@ Chong, Michelle S., Masashi Wakaiki, and Joao P. Hespanha. "Observability of lin
 
 ### 7. SMT-based observer 
 Shoukry, Yasser, et al. "Secure state estimation for cyber-physical systems under sensor attacks: A satisfiability modulo theory approach." IEEE Transactions on Automatic Control 62.10 (2017): 4917-4932.
+
+## 2021/04/26 update
+add real ML localization algorithm, below is the precision of the generated support prior
+
+![Prior_precision](https://user-images.githubusercontent.com/36635562/116096584-6aea6f80-a677-11eb-9a5b-8c29c95f26ca.png)
+
+The updated comparison result:
+![application_example_result](https://user-images.githubusercontent.com/36635562/116096724-848bb700-a677-11eb-9bf8-2c4711542b0e.png)
+
+The performance of designed FDIA:
+![BDD](https://user-images.githubusercontent.com/36635562/116096879-a4bb7600-a677-11eb-94f4-6d70d3885bf3.png)
+
