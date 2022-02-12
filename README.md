@@ -24,21 +24,8 @@ If you use the codes, please cite
    doi={10.23919/ACC50511.2021.9482913}}
 ```
 
-Unfortunately, we are makeing last-round of polishing. We will send it out soon and it will be attached once accepted.
 
-You can also cite an introduction version of it (accepted):
-```
-@inproceedings{zheng2021Resilient,
-  title={Attack-Resilient Weighted L1 Observer with Prior Pruning},
-  author={Zheng, Yu and Anubi, Olugbenga Moses},
-  booktitle={2021 American control conference},
-  pages={},
-  year={2021},
-  organization={IEEE}
-}
-```
-
-Any questions, please contact Yu Zheng (yz19b@fsu.edu). All rights reserved.
+Any questions, please contact Yu Zheng (yz19b@fsu.edu). 
 
 ## Tested observers
 
