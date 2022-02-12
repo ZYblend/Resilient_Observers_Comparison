@@ -13,14 +13,15 @@ Good Resilient Observes in literature and my resilent observers will be tested h
 If you use the codes, please cite
 
 ```
-@inproceedings{zheng2021Resilient,
-  title={Resilient Observer Design Using Pruned Support Prior},
-  author={Zheng, Yu and Anubi, Olugbenga Moses},
-  booktitle={},
-  pages={},
-  year={2021},
-  organization={}
-}
+@INPROCEEDINGS{9482913,  
+   author={Zheng, Yu and Anubi, Olugbenga Moses},  
+   booktitle={2021 American Control Conference (ACC)},   
+   title={Attack-Resilient Weighted $\ell_{1}$ Observer with Prior Pruning},  
+   year={2021},  
+   volume={},  
+   number={},  
+   pages={340-345},  
+   doi={10.23919/ACC50511.2021.9482913}}
 ```
 
 Unfortunately, we are makeing last-round of polishing. We will send it out soon and it will be attached once accepted.
