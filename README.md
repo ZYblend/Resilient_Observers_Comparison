@@ -44,18 +44,18 @@ Please refer to "**run_model.m**" for parameter settings, "**System_model_discre
 ### 1. L1 decoder
 Fawzi, Hamza, Paulo Tabuada, and Suhas Diggavi. "Secure estimation and control for cyber-physical systems under adversarial attacks." IEEE Transactions on Automatic control 59.6 (2014): 1454-1467.
 ```
-Parameter preparison: Resilent_Optimizer/ETLO_params.m
+Parameter preparison: Resilent_Optimizer/opti_params.m
 Solver: Resilent_Optimizer/solver_call_unc.m
-Usage example: System_model_discrete_2021.slx/Event-triggered Luenburger Observer
+Usage example: System_model_discrete_2021.slx/Unconstrained l1-based Observer
 ```
 
 ### 2. Switched/event triggered Luengbuger observer
 - Lu, An-Yang, and Guang-Hong Yang. "Secure state estimation for cyber-physical systems under sparse sensor attacks via a switched Luenberger observer." Information sciences 417 (2017): 454-464. <br>
 - Shoukry, Yasser, and Paulo Tabuada. "Event-triggered state observers for sparse sensor noise/attacks." IEEE Transactions on Automatic Control 61.8 (2015): 2079-2091.
 ```
-Parameter preparison: Resilent_Optimizer/opti_params.m
+Parameter preparison: Resilent_Optimizer/ETLO_params.m
 Solver: Resilent_Optimizer/solver_event_luenburger.m
-Usage example: System_model_discrete_2021.slx/Unconstrained l1-based Observer
+Usage example: System_model_discrete_2021.slx/Event-triggered Luenburger Observer
 ```
 
 ### 3. Multi-Model Resilient Observer
