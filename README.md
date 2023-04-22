@@ -45,7 +45,7 @@ Please refer to "**run_model.m**" for parameter settings, "**System_model_discre
 Fawzi, Hamza, Paulo Tabuada, and Suhas Diggavi. "Secure estimation and control for cyber-physical systems under adversarial attacks." IEEE Transactions on Automatic control 59.6 (2014): 1454-1467.
 ```
 Parameter preparison: Resilent_Optimizer/ETLO_params.m
-Solver: Resilent_Optimizer/solver_event_luenburger.m
+Solver: Resilent_Optimizer/solver_call_unc.m
 Usage example: System_model_discrete_2021.slx/Event-triggered Luenburger Observer
 ```
 
@@ -54,7 +54,7 @@ Usage example: System_model_discrete_2021.slx/Event-triggered Luenburger Observe
 - Shoukry, Yasser, and Paulo Tabuada. "Event-triggered state observers for sparse sensor noise/attacks." IEEE Transactions on Automatic Control 61.8 (2015): 2079-2091.
 ```
 Parameter preparison: Resilent_Optimizer/opti_params.m
-Solver: Resilent_Optimizer/solver_call_unc.m
+Solver: Resilent_Optimizer/solver_event_luenburger.m
 Usage example: System_model_discrete_2021.slx/Unconstrained l1-based Observer
 ```
 
